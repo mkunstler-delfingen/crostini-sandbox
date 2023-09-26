@@ -1,0 +1,8 @@
+---
+  - name: Test Crostini deployment
+    hosts: localhost
+    tasks:
+    - name: Simply create a file ;)
+      ansible.builtin.copy:
+        content: "{{ ansible_date_time | to_nice_json }}"
+        dest: deployment_date.txt
